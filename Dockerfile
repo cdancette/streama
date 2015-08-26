@@ -14,6 +14,7 @@ RUN tar zxvf /tmp/master.tar.gz --strip-components=1 \
 	&& rm -rf /usr/local/tomcat/webapps/* \
 	&& mv /tmp/DataSource.groovy grails-app/conf/ \
 	&& JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64 ./grailsw war /usr/local/tomcat/webapps/ROOT.war \
+	&& cp /usr/local/tomcat/webapps/ROOT.war /usr/local/tomcat/webapps/streama.war \
 	&& apt-get remove -y openjdk-7-jdk \
 	&& apt-get autoremove -y --purge
 

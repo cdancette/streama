@@ -18,5 +18,5 @@ VOLUME ["/media/storage", "/data/streama"]
 
 EXPOSE 8080
 
-CMD ["/opt/streama/grailsw", "run-war"]
+CMD ["/bin/bash", "/opt/streama/grailsw", "run-war"]
 
